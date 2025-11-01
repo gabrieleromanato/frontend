@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript Calendar</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link id="calendar-base-styles" rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="calendar"></div>
+    <script src="calendar.js"></script>
+    <script>
+      const cal = new Calendar(document.getElementById('calendar'), {
+        onSelect: (date) => console.log(date),
+      });
+    </script>
+  </body>
+</html>

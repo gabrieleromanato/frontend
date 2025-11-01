@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JavaScript: password generator</title>
+    <link rel="stylesheet" href="password-generator.css" type="text/css" media="screen">
+</head>
+<body>
+    <form action="" method="post" id="password-generator">
+        <div class="form-row">
+            <input type="text" id="password" name="password">
+            <button type="button" id="create-password">Create Password</button>
+            <button type="button" id="copy-password">Copy Password</button>
+        </div>
+        <div class="form-text">
+            <p>Password Length (8-64)</p>
+        </div>
+        <div class="form-slider">
+            <input type="range" min="8" max="64" step="1" id="password-length" value="8">
+        </div>
+        <div class="form-options">
+            <div>
+                <label for="password-letters">
+                    <input type="checkbox" id="password-letters">
+                    <span>Letters</span>
+                </label>
+            </div>
+            <div>
+                <label for="password-mixed">
+                    <input type="checkbox" id="password-mixed">
+                    <span>Mixed Case</span>
+                </label>
+            </div>
+            <div>
+                <label for="password-punctuation">
+                    <input type="checkbox" id="password-punctuation">
+                    <span>Punctuation</span>
+                </label>
+            </div>
+            <div>
+                <label for="password-numbers">
+                    <input type="checkbox" id="password-numbers">
+                    <span>Numbers</span>
+                </label>
+            </div>
+        </div>
+    </form>
+    <script src="password-generator.js"></script>
+    <script>
+        const passwordGenerator = new PasswordGenerator({
+            input: document.getElementById('password'),
+            createButton: document.getElementById('create-password'),
+            copyButton: document.getElementById('copy-password'),
+            lengthInput: document.getElementById('password-length'),
+            lettersControl: document.getElementById('password-letters'),
+            mixedControl: document.getElementById('password-mixed'),
+            punctControl: document.getElementById('password-punctuation'),
+            numberControl: document.getElementById('password-numbers')
+        });
+    </script>
+</body>
+</html>

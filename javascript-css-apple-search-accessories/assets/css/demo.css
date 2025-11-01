@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'SF Pro Display', 'SF Pro Icons', 'AOS Icons', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #111;
+    background-color: #fff;
+}
+
+input {
+   font-family: 'SF Pro Display', 'SF Pro Icons', 'AOS Icons', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+   font-size: 1rem; 
+}
+
+.sr {
+    position: absolute;
+    top: -9999em;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+#demo {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#overlay {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(192, 192, 192, 0.5);
+    opacity: 0;
+    display: none;
+    transition: opacity 400ms ease-in;
+}
+
+#search {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
+    position: relative;
+    z-index: 1000;
+}
+
+#search .fields-wrap {
+    width: 100%;
+    
+}
+
+#search .term-wrap {
+    position: relative;
+    display: block;
+    width: 100%;
+    z-index: 100;
+}
+
+#suggestions {
+    position: absolute;
+    top: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 10%);
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 1rem 0;
+    z-index: 90;
+    display: none;
+}
+
+#suggestions .suggestion {
+    padding: 0.3rem 2.67rem;
+    font-weight: 300;
+    margin-bottom: 0.6em;
+    cursor: pointer;
+}
+
+#suggestions .suggestion:hover {
+    background-color: #f5f5f5;
+}
+
+#suggestions .suggestion span {
+    display: block;
+    background: url(../images/search.svg) no-repeat 0 50%;
+    background-size: 1em 1em;
+    padding-left: 1.5em;
+}
+
+#term-cancel {
+    text-decoration: none;
+    width: 23px;
+    height: 23px;
+    color: #fff;
+    background-color: #666;
+    border-radius: 50%;
+    font-size: 22px;
+    line-height: 19px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    margin-top: -12px;
+    transition: opacity 400ms ease-in;
+    opacity: 0;
+    display: none;
+}
+
+#term {
+    appearance: none;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 1rem 2.67rem;
+    font-size: 1.2rem;
+    transition: all 400ms ease-in;
+    width: 100%;
+    background-image: url(../images/search.svg);
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: 2% 50%;
+    display: block;
+}
+
+#term:focus {
+    outline-style: none;
+    border-color: #0071e3;
+    box-shadow: 0 0 0 4px rgba(0, 125, 250, 60%);
+}
+
+@media screen and (min-width: 768px) {
+    #search .fields-wrap,
+    #suggestions  {
+        width: 490px;
+    }
+}

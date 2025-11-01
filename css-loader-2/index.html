@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CSS Loader 2</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="loader">
+            <div class="loader-line">
+            </div>
+        </div>
+        <script>
+            (function() {
+                const loader = document.querySelector('.loader');
+                setTimeout(() => {
+                    loader.classList.add('loaded');
+                    loader.addEventListener('animationend', () => {
+                        loader.remove();
+                    });
+                }, 3500);
+            })();
+        </script>    
+    </body>
+</html>

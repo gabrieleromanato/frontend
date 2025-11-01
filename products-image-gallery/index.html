@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JavaScript and CSS Products Image Gallery</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta property="og:title" content="JavaScript and CSS Products Image Gallery">
+	<meta property="og:description" content="A simple demo in pure JavaScript and CSS showing a products image gallery.">
+	<meta property="og:image" content="https://gabrieleromanato.dev/demo/products-image-gallery/assets/images/products/product_1.jpg">
+	<meta property="og:url" content="https://gabrieleromanato.dev/demo/products-image-gallery/">
+    <link rel="stylesheet" href="assets/css/demo.css" type="text/css" media="screen">
+</head>
+<body>
+    <main id="gallery">
+        <figure><img src="assets/images/products/product_1.jpg" alt=""><button type="button" class="view">View</button></figure>
+        <figure><img src="assets/images/products/product_2.jpg" alt=""><button type="button" class="view">View</button></figure>
+        <figure><img src="assets/images/products/product_3.jpg" alt=""><button type="button" class="view">View</button></figure>
+        <figure><img src="assets/images/products/product_4.jpg" alt=""><button type="button" class="view">View</button></figure>
+        <figure><img src="assets/images/products/product_5.jpg" alt=""><button type="button" class="view">View</button></figure>
+        <figure><img src="assets/images/products/product_6.jpg" alt=""><button type="button" class="view">View</button></figure>
+        <figure><img src="assets/images/products/product_7.jpg" alt=""><button type="button" class="view">View</button></figure>
+        <figure><img src="assets/images/products/product_8.jpg" alt=""><button type="button" class="view">View</button></figure>
+        <figure><img src="assets/images/products/product_9.jpg" alt=""><button type="button" class="view">View</button></figure>
+        <figure><img src="assets/images/products/product_10.jpg" alt=""><button type="button" class="view">View</button></figure>
+        <figure><img src="assets/images/products/product_11.jpg" alt=""><button type="button" class="view">View</button></figure>
+        <figure><img src="assets/images/products/product_12.jpg" alt=""><button type="button" class="view">View</button></figure>
+    </main> 
+    <div id="gallery-view" aria-hidden="true">
+        <a href="#gallery-view" id="gallery-view-close">&times;</a>
+        <div id="gallery-image"></div>
+    </div>
+    <script src="assets/js/demo.js"></script>  
+</body>
+</html>

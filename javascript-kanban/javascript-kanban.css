@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    font: 100%/1.5 system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+    background: #fff;
+    color: #000;
+}
+
+.kanban {
+    padding: 1em;
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    gap: 1em;
+}
+
+.kanban-column {
+    padding: 1em;
+    background-color: rgb(31 41 55);
+    color: #fff;
+    border-radius: 0.6em;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.kanban-column header {
+    margin-bottom: 1em;
+}
+
+.kanban-column header h2 {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.kamban-items {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.kanban-items li {
+    padding: 1em;
+    background-color: rgb(50 61 78);
+    border-radius: 0.5em;
+    margin-bottom: 1.5em;
+    cursor: move;
+}

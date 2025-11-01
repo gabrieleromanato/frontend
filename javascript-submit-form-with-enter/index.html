@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript: submit a form with the Enter key</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 100%;
+            font-family: inherit;
+        }
+
+        *:focus {
+            outline-style: none;
+            box-shadow: none;
+        }
+
+        html {
+            font-size: 16px;
+        }
+
+        body {
+            font: 1rem/1.5 Arial, Helvetica, sans-serif;
+            padding: 1rem;
+        }
+
+        form {
+            max-width: 600px;
+            padding: 1rem;
+            border: 1px solid #dedede;
+            border-radius: 4px;
+            margin: 2rem auto;
+            box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12);
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 0.6rem;
+            font-weight: bold;
+        }
+
+        form textarea {
+            display: block;
+            padding: 1rem;
+            background: #fff;
+            border: 1px solid #dedede;
+            width: 100%;
+            border-radius: 4px;
+            height: 120px;
+        }
+
+        .hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            top: -9999em;
+        }
+
+        #output {
+            margin-top: 1rem;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="post" id="form">
+        <div>
+            <label for="message">Enter your message</label>
+            <textarea id="message"></textarea>
+        </div>
+        <div class="hidden">
+            <input type="submit" value="Send">
+        </div>
+        <div id="output"></div>
+    </form>
+<script>
+(function() {
+
+    const handleSubmit = evt => {
+        return evt.preventDefault();
+    };
+
+    const enterAction = messageInput => {
+        document.getElementById('output').innerText = messageInput.value;
+        messageInput.value = '';
+    };
+
+    const handleEnter = evt => {
+        if(evt.code === 'Enter') {
+            evt.preventDefault();
+            return enterAction(evt.target);
+        }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('form');
+        const message = document.getElementById('message');
+
+        form.addEventListener('submit', handleSubmit, false);
+        message.addEventListener('keypress', handleEnter, false);
+    }, false);
+
+})();
+</script>
+</body>
+</html>

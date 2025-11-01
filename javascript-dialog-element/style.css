@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+    font-weight: normal;
+    font-family: inherit;
+}
+
+:root {
+    --main-font: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+    --main-bg: #fff;
+    --main-color: #000;
+    --button-bg: #ff3d00;
+    --alt-bg: #f8f8f8;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font: 1rem/1.5 var(--main-font);
+    background: var(--main-bg);
+    color: var(--main-color);
+    padding: 1rem;
+}
+
+p {
+    margin: 1rem 0;
+}
+
+button {
+    cursor: pointer;
+    appearance: none;
+    padding: 0.8rem 1.3rem;
+    border: none;
+    background-color: var(--button-bg);
+    color: var(--main-bg);
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+button + button {
+    margin-left: 1rem;
+}
+
+.modal {
+    background-color: var(--main-bg);
+    border: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-header {
+    background-color: var(--button-bg);
+    color: var(--main-bg);
+    padding: 1rem;
+    text-align: center;
+}
+
+.modal-header h2 {
+    font-weight: 900;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.modal-body {
+    padding: 0 1rem;
+    line-height: 1.7;
+}
+
+.modal-footer {
+    background-color: var(--alt-bg);
+    padding: 1rem;
+    text-align: center;
+}

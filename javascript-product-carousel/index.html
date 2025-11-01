@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JavaScript Product Carousel</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="JavaScript Product Carousel">
+    <meta property="og:description" content="An advanced JavaScript product carousel with zero dependecies.">
+    <meta property="og:image" content="https://gabrieleromanato.dev/demo/javascript-product-carousel/images/share.jpg">
+    <meta property="og:url" content="https://gabrieleromanato.dev/demo/javascript-product-carousel/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen">
+</head>
+<body>
+    <section id="carousel" class="carousel">
+        <nav class="carousel-nav">
+            <button type="button" class="carousel-prev">
+                <span class="sr">Previous</span>
+                <img src="icons/angle-left-solid.svg" alt="" aria-hidden="true">
+            </button>
+            <button type="button" class="carousel-next">
+                <span class="sr">Next</span>
+                <img src="icons/angle-right-solid.svg" alt="" aria-hidden="true">
+            </button>
+        </nav>
+        <ol class="carousel-wrap">
+            <li class="carousel-item">
+                <img class="carousel-image"  src="images/1.jpg" alt="">
+            </li>
+            <li class="carousel-item">
+                <img class="carousel-image"  src="images/2.jpg" alt="">
+            </li>
+            <li class="carousel-item">
+                <img class="carousel-image"  src="images/3.jpg" alt="">
+            </li>
+            <li class="carousel-item">
+                <img class="carousel-image"  src="images/4.jpg" alt="">
+            </li>
+            <li class="carousel-item">
+                <img class="carousel-image"  src="images/5.jpg" alt="">
+            </li>
+            <li class="carousel-item">
+                <img class="carousel-image"  src="images/6.jpg" alt="">
+            </li>
+            <li class="carousel-item">
+                <img class="carousel-image"  src="images/7.jpg" alt="">
+            </li>
+            <li class="carousel-item">
+                <img class="carousel-image"  src="images/8.jpg" alt="">
+            </li>
+            <li class="carousel-item">
+                <img class="carousel-image"  src="images/9.jpg" alt="">
+            </li>
+            <li class="carousel-item">
+                <img class="carousel-image"  src="images/10.jpg" alt="">
+            </li>
+            <li class="carousel-item">
+                <img class="carousel-image"  src="images/11.jpg" alt="">
+            </li>
+            <li class="carousel-item">
+                <img class="carousel-image"  src="images/12.jpg" alt="">
+            </li>
+            <li class="carousel-item">
+                <img class="carousel-image" src="images/13.jpg" alt="">
+            </li>
+            <li class="carousel-item">
+                <img class="carousel-image" src="images/14.jpg" alt="">
+            </li>
+            <li class="carousel-item">
+                <img class="carousel-image" src="images/15.jpg" alt="">
+            </li>
+            <li class="carousel-item">
+                <img class="carousel-image" src="images/16.jpg" alt="">
+            </li>
+            <li class="carousel-item">
+                <img class="carousel-image" src="images/17.jpg" alt="">
+            </li>
+            <li class="carousel-item">
+                <img class="carousel-image" src="images/18.jpg" alt="">
+            </li>
+            <li class="carousel-item">
+                <img class="carousel-image" src="images/19.jpg" alt="">
+            </li>
+            <li class="carousel-item">
+                <img class="carousel-image" src="images/20.jpg" alt="">
+            </li>
+            <li class="carousel-item">
+                <img class="carousel-image" src="images/21.jpg" alt="">
+            </li>
+            <li class="carousel-item">
+                <img class="carousel-image" src="images/22.jpg" alt="">
+            </li>
+            <li class="carousel-item">
+                <img class="carousel-image" src="images/23.jpg" alt="">
+            </li>
+            <li class="carousel-item">
+                <img class="carousel-image" src="images/24.jpg" alt="">
+            </li>
+        </ol>
+    </section> 
+    <div id="carousel-overlay">
+        <a href="#carousel-overlay" id="carousel-overlay-close">&times;</a>
+        <div id="carousel-overlay-content">
+            <article id="carousel-overlay-product"></article>
+        </div>
+    </div>
+    <div id="loader" aria-hidden="true">Loading...</div>
+    <script src="carousel.js"></script>
+    <script>
+        (function() {
+            const carousel = new Carousel({
+                container: '#carousel'
+            });
+        })();
+    </script>  
+</body>
+</html>

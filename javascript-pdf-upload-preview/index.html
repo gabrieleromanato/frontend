@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JavaScript PDF Upload Preview</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <form class="upload-form" action="#" method="post">
+            <div>
+                <label for="pdf">Upload PDF</label>
+                <div class="input-wrapper">
+                    <input type="file" name="pdf" id="pdf" accept="application/pdf">
+                </div>
+            </div>
+            
+        </form>
+        <div id="pdf-preview-wrapper">
+                <button type="button" id="pdf-preview-close">&times;</button>
+                <canvas id="pdf-preview"></canvas>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

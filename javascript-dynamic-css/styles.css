@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline-style: none;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: #fff;
+    color: #000;
+    font: 1rem/1.5 Helvetica, Arial, sans-serif;
+    padding: 5% 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+input, button {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+}
+
+button {
+    appearance: none;
+    cursor: pointer;
+    padding: 0.7rem 1.6rem;
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+}
+
+.hidden {
+    position: absolute;
+    top: -9999em;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.todo-actions:not([class*="hidden"]) {
+    margin: 1.2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.todo-sort:not([class*="hidden"]) {
+    margin: 0;
+    width: 4rem;
+    height: 2rem;
+    overflow: hidden;
+    border: 1px solid #000;
+    text-align: center;
+}
+
+.todo-sort:not([class*="hidden"]) ul,
+.todo-sort:not([class*="hidden"]) ul li {
+    margin: 0;
+    padding: 0;
+    display: block;
+    list-style: none;
+}
+
+.todo-sort:not([class*="hidden"]) ul {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.todo-sort:not([class*="hidden"]) ul li {
+    cursor: pointer;
+    padding: 0.25rem;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}    
+
+.todo-sort:not([class*="hidden"]) ul li.active {
+    font-weight: bold;
+    background-color: #f5f5f5;
+    z-index: 1000;
+}    
+
+.todo-form div {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-description {
+    border: 1px solid #ccc;
+    padding: 0.7rem;
+    flex: 1 1;
+    border-right: none;
+}
+
+.todo-search-term {
+    border: 1px solid #ccc;
+    border-width: 0 0 1px 0;
+    padding: 0.7rem 0 0.7rem 0.7rem;   
+}
+
+.todo-list {
+    margin: 0;
+    padding: 2rem 0;
+    list-style: none;
+}
+
+.todo {
+    margin-bottom: 1.2rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo button {
+    color: #c00;
+    margin-left: 2%;
+    background: transparent;
+    padding: 0;
+    text-transform: none;
+    font-size: 1.4rem;
+}

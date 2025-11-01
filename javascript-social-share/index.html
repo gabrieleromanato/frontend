@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Social Share</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="JavaScript Social Share">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            font-size: 16px;
+        }
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            color: #000;
+            background: #fff;
+            line-height: 1.6;
+        }
+
+        #demo {
+            max-width: 960px;
+            padding: 0 1rem;
+            margin: 2.5rem auto;
+        }
+
+        h1 {
+            margin-bottom: 2rem;
+        }
+
+        form * {
+            font: 1rem Helvetica, Arial, sans-serif;
+        }
+
+        form div {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        form label {
+            margin-right: 0.5rem;
+        }
+
+        form select {
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+        }
+
+        form button {
+            border: none;
+            padding: 0.7rem 1.2rem;
+            background: #000;
+            color: #fff;
+            margin-left: 0.5rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<main id="demo">
+    <h1>JavaScript Social Share</h1>
+    <form id="demo-form" action="" method="post">
+        <div>
+            <label for="position">Position</label>
+            <select name="position" id="position">
+                <option value="left" selected>Left</option>
+                <option value="right">Right</option>
+                <option value="top">Top</option>
+                <option value="bottom">Bottom</option>
+            </select>
+            <button id="add-button" type="button">Add button</button>
+        </div>
+    </form>
+</main>
+
+
+<script src="js/social-share.js"></script>
+<script src="js/demo.js"></script>
+</body>
+</html>

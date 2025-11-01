@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript E-Commerce App</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="JavaScript E-Commerce App" />
+    <meta property="og:description" content="A Vanilla JS SPA." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://gabrieleromanato.dev/demo/javascript-ecommerce-app" />
+    <meta
+      property="og:image"
+      content="https://gabrieleromanato.dev/demo/javascript-ecommerce-app/images/cover.webp"
+    />
+    <meta property="og:site_name" content="JavaScript E-Commerce App" />
+    <meta property="article:author" content="Gabriele Romanato" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@gabromanato" />
+    <meta name="twitter:creator" content="@gabromanato" />
+    <meta name="twitter:title" content="JavaScript E-Commerce App" />
+    <meta name="twitter:description" content="A Vanilla JS SPA." />
+    <meta
+      name="twitter:image"
+      content="https://gabrieleromanato.dev/demo/javascript-ecommerce-app/images/cover.webp"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main id="app">
+      <header id="app-header">
+        <h1>PC Fans</h1>
+        <button id="app-show-cart" type="button">
+          <span id="app-cart-total-counter">0</span>
+        </button>
+      </header>
+      <section id="app-products"></section>
+    </main>
+    <aside id="app-cart">
+      <button id="close-app-cart" type="button">&times;</button>
+      <ul id="app-cart-contents"></ul>
+      <div id="app-cart-summary">
+        <form
+          id="app-paypal-form"
+          action="https://www.sandbox.paypal.com/cgi-bin/webscr"
+          method="post"
+        >
+          <input type="hidden" name="cmd" value="_cart" />
+          <input type="hidden" name="upload" value="1" />
+          <input
+            type="hidden"
+            name="business"
+            value="dev@gabrieleromanato.com"
+          />
+          <input type="hidden" name="currency_code" value="USD" />
+          <div id="app-paypal-form-lines"></div>
+          <button type="submit" id="app-checkout-button">Pay Now</button>
+        </form>
+
+        <div id="app-cart-total"></div>
+      </div>
+    </aside>
+    <div id="preloader">
+      <div class="loader"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

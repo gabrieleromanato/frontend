@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  font: 100%/1.5 system, -apple-system, '.SFNSText-Regular', 'San Francisco',
+    'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif;
+  background: #fff;
+  color: #000;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.calendar {
+  --gap: 0.5rem;
+  --radius: 0.6rem;
+  --muted: #98a2b3;
+  --ring: #2563eb;
+  --sel-bg: #2563eb15;
+  --today: #16a34a;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    sans-serif;
+  max-width: 340px;
+}
+.cal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap);
+  margin-bottom: var(--gap);
+}
+.cal-title {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.cal-btn {
+  padding: 0.35rem 0.6rem;
+  border-radius: var(--radius);
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  cursor: pointer;
+}
+.cal-btn:hover {
+  background: #f8fafc;
+}
+.cal-week-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  margin-bottom: 2px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.cal-weekday {
+  text-align: center;
+  padding: 0.25rem 0;
+}
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+.cal-cell {
+  position: relative;
+  padding: 0.6rem 0;
+  text-align: center;
+  border-radius: var(--radius);
+  border: 1px solid #f1f5f9;
+  background: #fff;
+  cursor: pointer;
+}
+.cal-cell:focus {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+  z-index: 1;
+}
+.cal-cell.is-out {
+  color: var(--muted);
+  background: #fafafa;
+}
+.cal-cell.is-today {
+  box-shadow: inset 0 0 0 2px var(--today);
+}
+.cal-cell.is-selected {
+  background: var(--sel-bg);
+  border-color: #c7d2fe;
+}

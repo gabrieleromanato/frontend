@@ -1,0 +1,71 @@
+#social-share {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 40px;
+    position: fixed;
+    z-index: 9999;
+}
+
+#social-share.horizontal {
+    width: auto;
+    position: static;
+    z-index: initial;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#social-share.left {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+#social-share.right {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+#social-share.top {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#social-share.bottom {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#social-share li {
+    display: block;
+}
+
+#social-share a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+#social-share a[class*=facebook] {
+    background:#3a579a;
+}
+
+#social-share a[class*=twitter] {
+    background:#00abf0;
+}
+#social-share a[class*=linkedin] {
+    background:#127bb6;
+}

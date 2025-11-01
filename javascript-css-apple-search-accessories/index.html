@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JavaScript and CSS Demo: Apple's Search Accessories</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="JavaScript and CSS Demo: Apple's Search Accessories">
+	<meta property="og:description" content="A simple demo in pure JavaScript and CSS inspired by the Apple Store.">
+	<meta property="og:image" content="https://gabrieleromanato.dev/demo/javascript-css-apple-search-accessories/assets/images/share-media.jpg">
+	<meta property="og:url" content="https://gabrieleromanato.dev/demo/javascript-css-apple-search-accessories/">
+	<meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="assets/css/demo.css" type="text/css" media="screen">
+</head>
+<body>
+    <main id="demo">
+        <div id="overlay" aria-hidden="true"></div>
+        <form action="" method="get" id="search">
+            <div class="fields-wrap">
+               
+                <label for="term" class="sr">Search accessories</label>
+                <span class="term-wrap">
+                    <input type="text" name="term" id="term" placeholder="Search accessories">
+                    <a href="#term" id="term-cancel" aria-hidden="true">&times;</a>
+                </span>
+                <div id="suggestions" aria-hidden="true"></div>
+                <input type="submit" value="Search" class="sr">
+            </div>
+        </form>
+    </main>
+    <script src="assets/js/demo.js"></script>
+</body>
+</html>

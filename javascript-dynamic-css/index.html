@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Dynamic CSS</title>
+    <style>
+        body {
+            opacity: 0;
+            transition: opacity 400ms linear;
+        }
+
+        .css-loaded {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    
+    <form action="" method="post" class="todo-form">
+        <div>
+            <input type="text" class="todo-description">
+            <button type="submit">Add</button>
+        </div>
+    </form>
+    <div class="todo-actions hidden">
+        <div class="todo-sort">
+            <ul>
+                <li data-order="ASC" class="active">ASC</li>
+                <li data-order="DESC">DESC</li>
+            </ul>
+        </div> 
+        <form class="todo-search" method="get" action="">
+            <div>
+                <input type="text" class="todo-search-term" placeholder="Search...">
+                <button type="button" class="todo-reset-search">&times;</button>
+                <input type="submit" class="hidden" value="Find">
+            </div>
+            
+        </form> 
+    </div> 
+    
+    <ul class="todo-list"></ul>
+    <script src="script.js"></script>
+</body>
+</html>
