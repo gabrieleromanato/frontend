@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="SuperEnalotto game in plain JavaScript.">
+    <meta property="og:title" content="SuperEnalotto Online | JavaScript">
+    <meta property="og:description" content="SuperEnalotto game in plain JavaScript.">
+    <meta property="og:image" content="https://gabrieleromanato.dev/demo/superenalotto/images/superenalotto.png">
+    <meta property="og:url" content="https://gabrieleromanato.dev/demo/superenalotto/">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>SuperEnalotto Online | JavaScript</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="stylesheet" href="css/style.css" media="screen">
+</head>
+<body>
+    <main class="app">
+        <header class="app-header">
+            <h1>SuperEnalotto Online</h1>
+            <button class="add-card">Play <i class="fa-solid fa-plus"></i></button>
+        </header>
+        <figure class="app-image">
+            <img src="images/app-image.png" alt="SuperEnalotto Online">
+        </figure>
+        <div id="cards-wrapper">
+            <div id="cards" class="cards cards-transition"></div>
+        </div> 
+        
+        <div class="cards-actions">
+            <div class="cards-price">
+                <span class="currency">$</span>
+                <span class="price">0.00</span>
+            </div>
+            <button type="button" class="next-btn">
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            <button type="button" class="button proceed-btn">
+                Proceed
+            </button>
+        </div>
+    </main>
+    <dialog id="cards-summary">
+        <div class="cards-summary-header">
+            <h2>Game Results</h2>
+            <button class="close-btn"><i class="fa-solid fa-times"></i></button>
+        </div>
+        <div class="cards-results"></div>
+        <div id="payment">
+            <div id="paypal-button-container"></div>
+            <div id="transaction"></div>
+        </div>
+    </dialog>
+    <script src="https://www.paypal.com/sdk/js?client-id=AZ25PO_-Up5MPRCd2Gro_vwupWK3NgDdESXyr-lCVc5B6GjzKuUFPhonVWlgW75VJRJ-qWVXWKcqsTzb"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

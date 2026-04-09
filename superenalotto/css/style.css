@@ -1,0 +1,330 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+@font-face {
+  font-family: "Roboto";
+  src:
+          url("fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src:
+          url("fonts/Roboto-Italic.ttf") format("truetype");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src:
+          url("fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+
+@font-face {
+  font-family: "Roboto";
+  src:
+          url("fonts/Roboto-Black.ttf") format("truetype");
+  font-weight: 900;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-size: 100%;
+  font-family: inherit;
+}
+
+:root {
+  --font: Roboto, sans-serif;
+  --body-bg: #fff;
+  --body-color: #000;
+  --app-width: 1120px;
+  --border-color: rgba(149,157,165,0.3);
+  --button-bg: #fdc400;
+  --card-bg: rgb(216, 235, 209)
+}
+
+:focus,
+:active {
+  outline-style: none;
+  box-shadow: none;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font: 1rem/1.5 var(--font);
+  background: var(--body-bg);
+  color: var(--body-color);
+}
+
+button, input[type="submit"] {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0;
+    color: var(--body-color);
+}
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    background: var(--button-bg);
+    color: var(--body-color);
+    padding: 0.9rem 1.3rem;
+    border-radius: 4px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-weight: bold;
+}
+
+.app {
+    margin: 2.5rem auto;
+    max-width: var(--app-width);
+    padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+    .app {
+        padding: 0;
+    }
+}
+
+.card-wrapper {
+  margin-bottom: 2rem;
+}
+
+.app-image {
+  width: 100%;
+  margin: 1em 0;
+  padding: 1em;
+  border: 1px solid var(--border-color);
+}
+
+.app-image img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.app-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.app-header h1 {
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+
+.add-card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.add-card i {
+  margin-left: 0.5rem;
+}
+
+#cards-wrapper {
+    margin: 2rem 0;
+    overflow: hidden;
+}
+
+#cards {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.cards-transition {
+  transition: transform 0.7s ease-in-out;
+}
+
+#cards .card-wrapper {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.card-header {
+    padding-bottom: 0.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.card-progress {
+    margin-left: auto;
+    width: 85%;
+    height: 8px;
+    background-color: rgb(239, 245, 237);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-progress div {
+    width: 0;
+    height: 100%;
+    background: rgb(29, 127, 53);
+    transition: width 400ms ease-in-out;
+    border-radius: 10px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.card-number {
+    width: 6%;
+    background: var(--body-bg);
+    padding: 0.5rem;
+    border-radius: 4px;
+    margin: 0.5% 0 0.5% 0.5%;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.card-number.selected {
+    background: rgb(29, 127, 53);
+    color: var(--body-bg);
+}
+
+.cards-actions {
+    margin-top: 1.5em;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+    display: none;
+}
+
+.cards-actions.visible {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#cards-summary {
+  background-color: var(--body-bg);
+  border: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+}
+
+.cards-summary-header {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cards-summary-header h2 {
+  font-size: 1.2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  margin: 0;
+}
+
+.cards-results {
+  padding: 1em;
+}
+
+.cards-results .winning {
+  background-color: var(--card-bg);
+  padding: 1em;
+  font-size: 1.2em;
+  font-weight: 900;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.cards-results .winning span {
+  padding: 0.2rem 0.4rem;
+  background: var(--body-bg);
+  border-radius: 4px;
+}
+
+.cards-results .winning span.winning-number {
+  color: rgb(29, 127, 53);
+  outline: 2px solid rgb(29, 127, 53);
+}
+
+.cards-result {
+  padding: 0.5em;
+  border: 1px solid var(--border-color);
+  text-align: center;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.cards-result.won {
+  color: rgb(29, 127, 53);
+}
+.cards-result.lost {
+  color: rgb(255, 0, 0);
+}
+
+#payment {
+  padding: 1em;
+}
+
+#transaction {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .app-header h1 {
+    font-size: 1.2rem;
+  } 
+  .card-header {
+    display: block;
+  } 
+  .card-progress {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+  .card {
+    padding: 8px;
+    justify-content: center;
+  }
+  .card-number {
+    padding: 4px;
+    width: 12%;
+    margin: 6px;
+  }
+}

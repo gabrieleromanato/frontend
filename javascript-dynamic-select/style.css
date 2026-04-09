@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font: 1rem/1.5 system-ui, sans-serif;
+    background: #fff;
+    color: #000;
+}
+
+@media screen and (min-width: 768px) {
+    html, body, main {
+        height: 100%;
+        min-height: 100vh;
+    }
+}
+
+main {
+    padding: 1.5rem;
+    margin: 2.5rem auto;
+    max-width: 960px;
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+}
+
+form {
+    width: 100%;
+}
+
+select {
+    font-family: inherit;
+    font-size: inherit;
+    display: block;
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 0.6rem;
+    border-radius: 3px;
+}
+
+.output {
+    margin-top: 1rem;
+}

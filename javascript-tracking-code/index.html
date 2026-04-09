@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tracking Code</title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen">
+</head>
+<body>
+    <form id="tracking-form">
+        <div>
+            <button type="button" id="create-tracking-code">Create sample code</button>
+        </div>
+        <div>
+            <label for="tracking-code">Tracking Code</label>
+            <input type="text" name="tracking-code" id="tracking-code">
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <label for="national">
+                        <span>National Shipping</span>
+                        <input type="checkbox" id="national" name="national">
+                    </label>
+                </li>
+                <li>
+                    <label for="international">
+                        <span>International Shipping</span>
+                        <input type="checkbox" id="international" name="international">
+                    </label>
+                </li>
+                <li>
+                    <label for="shipping-unit">
+                        <span>Shipping Unit</span>
+                        <input type="checkbox" id="shipping-unit" name="shipping-unit">
+                    </label>
+                </li>
+                <li>
+                    <label for="shipping-note">
+                        <span>Shipping Note</span>
+                        <input type="checkbox" id="shipping-note" name="shipping-note">
+                    </label>
+                </li>
+            </ul>
+        </div>
+    </form>
+    <script src="script.js"></script>   
+</body>
+</html>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Gabriele Romanato</title>
+        <link>https://gabrieleromanato.com/</link>
+        <description>Io, sviluppatore web</description>
+
+        
+        <item>
+            <title>Implementare un carrello di un e-commerce in Vue.js con Pinia</title>
+            <link>https://gabrieleromanato.com/2026/03/implementare-un-carrello-di-un-e-commerce-in-vuejs-con-pinia</link>
+            <description>Abbiamo costruito un carrello e-commerce completo utilizzando Vue.js 3 e Pinia, partendo dalla definizione dello store fino alla persistenza dei dati e ai test unitari.</description>
+        </item>
+        
+        <item>
+            <title>Implementare la 2FA in Java</title>
+            <link>https://gabrieleromanato.com/2026/03/implementare-la-2fa-in-java</link>
+            <description>L&#39;implementazione della 2FA in Java non richiede librerie complesse: l&#39;algoritmo TOTP è snello e si appoggia interamente sulle API crittografiche standard del linguaggio.</description>
+        </item>
+        
+        <item>
+            <title>Implementare la 2FA in Go</title>
+            <link>https://gabrieleromanato.com/2026/03/implementare-la-2fa-in-go</link>
+            <description>Abbiamo costruito un sistema di autenticazione a due fattori completo in Go, partendo dalla generazione del segreto TOTP fino alla validazione del codice, passando per la generazione del QR code, i codici di recupero e la protezione delle rotte tramite middleware.</description>
+        </item>
+        
+        <item>
+            <title>Creare un elemento select dinamico con JavaScript puro</title>
+            <link>https://gabrieleromanato.com/2026/03/creare-un-elemento-select-dinamico-con-javascript-puro</link>
+            <description>Questo articolo mostra come generare dinamicamente un elemento HTML select a partire da un array di dati, inserire l&#39;elemento nel DOM e reagire alle selezioni dell&#39;utente mostrando il valore scelto.</description>
+        </item>
+        
+        <item>
+            <title>Richieste HTTP con cURL in PHP</title>
+            <link>https://gabrieleromanato.com/2026/03/richieste-http-con-curl-in-php</link>
+            <description>cURL (Client URL) è una delle librerie più utilizzate in PHP per effettuare richieste HTTP verso server remoti.</description>
+        </item>
+        
+        <item>
+            <title>Gestire MySQL in PHP: guida alle funzionalità</title>
+            <link>https://gabrieleromanato.com/2026/03/gestire-mysql-in-php-guida-alle-funzionalita</link>
+            <description>PHP offre strumenti maturi e potenti per la gestione di MySQL.</description>
+        </item>
+        
+        <item>
+            <title>Implementare la 2FA in Python</title>
+            <link>https://gabrieleromanato.com/2026/03/implementare-la-2fa-in-python</link>
+            <description>L&#39;autenticazione a due fattori (2FA,  Two-Factor Authentication) rappresenta oggi uno degli strumenti più efficaci per proteggere gli account utente da accessi non autorizzati.</description>
+        </item>
+        
+        <item>
+            <title>Funzioni di callback in PHP moderno</title>
+            <link>https://gabrieleromanato.com/2026/03/funzioni-di-callback-in-php-moderno</link>
+            <description>Le funzioni di callback rappresentano uno dei pilastri della programmazione moderna in PHP.</description>
+        </item>
+        
+        <item>
+            <title>Markdown in JavaScript nel browser con Marked</title>
+            <link>https://gabrieleromanato.com/2026/03/markdown-in-javascript-nel-browser-con-marked</link>
+            <description>La libreria Marked si distingue per la sua semplicità di integrazione e la sua versatilità. Il codice analizzato
+in questo articolo mostra come, con poche righe di JavaScript, sia possibile costruire un convertitore Markdown
+funzionante direttamente nel browser.</description>
+        </item>
+        
+        <item>
+            <title>La classe facade URL in Laravel e il problema delle rotte signed con HTTPS</title>
+            <link>https://gabrieleromanato.com/2026/03/la-classe-facade-url-in-laravel-e-il-problema-delle-rotte-signed-con-https</link>
+            <description>Lo scenario che vogliamo illustrare in questo articolo è quello di un&#39;installazione Laravel che gestisce le API REST per un frontend posto su un dominio di terzo livello. Implementando la verifica dell&#39;indirizzo email di un utente, ci imbattiamo in un problema specifico legato al protocollo HTTPS in Laravel.</description>
+        </item>
+        
+
+    </channel>
+</rss>

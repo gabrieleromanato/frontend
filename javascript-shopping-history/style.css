@@ -1,0 +1,75 @@
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css');
+
+.card > figure {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.card > figure img {
+    display: block;
+    max-width: initial;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#app-header {
+    display: none;
+}
+
+#app-header.visible {
+    display: block;
+}
+
+#shopping-history-toggle,
+#shopping-history-toggle:active,
+#shopping-history-toggle:focus,
+#shopping-history-toggle:visited {
+    outline-style: none;
+    color: #333;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    font-weight: 700;
+    border-radius: 0;
+}
+
+#shopping-history-list {
+    display: none;
+    margin: 1em 0;
+    padding: 1em;
+    background-color: #eee;
+    border-radius: 0.25em;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    justify-content: center;
+}
+
+#shopping-history-list.visible {
+    display: flex;
+}
+
+#shopping-history-list > li {
+    width: 150px;
+    display: block;
+}
+
+#shopping-history-list > li a {
+    display: block;
+    width: 100%;
+    height: 100px;
+    text-decoration: none;
+}
+
+#shopping-history-list > li a img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.25em;
+}
+
+
+

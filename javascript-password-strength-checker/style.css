@@ -1,0 +1,136 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --body-bg: #fff;
+    --body-text-color: #000;
+    --font-sans: system-ui, sans-serif;
+    --border-color: #9E9E9E;
+    --border-radius: 4px;
+    --danger-color: #F44336;
+    --warning-color: #FF5722;
+    --medium-color: #FFC107;
+    --success-color: #4CAF50;
+    --bar-bg: #E0E0E0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--body-bg);
+    color: var(--body-text-color);
+    font-size: 1rem;
+    font-family: var(--font-sans);
+    line-height: 1.5;
+}
+
+main {
+    padding: 0 1rem;
+    margin: 3rem auto;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        max-width: 25vw;
+        margin: 20% auto;
+    }
+}
+
+input {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: var(--body-bg);
+    border: 1px solid var(--border-color);
+    transition: all 400ms ease;
+}
+
+input:focus {
+    outline-style: none;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: var(--border-radius);
+}
+
+.form-control:focus {
+    border-color: var(--body-text-color);
+}
+
+.password-strength {
+    margin-top: 0.5rem;
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.password-strength-bar {
+    width: 100%;
+    height: 12px;
+    border-radius: var(--border-radius);
+    background-color: var(--bar-bg);
+    overflow: hidden;
+}
+
+.password-strength-level {
+    width: 0%;
+    height: 100%;
+    border-radius: var(--border-radius);
+    transition: width 600ms ease-in;
+}
+
+.password-strength-label {
+    margin-top: 0.4rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.bg-danger {
+    background-color: var(--danger-color);
+}
+
+.bg-warning {
+    background-color: var(--warning-color);
+}
+
+.bg-medium {
+    background-color: var(--medium-color);
+}
+
+.bg-success {
+    background-color: var(--success-color);
+}
+
+.text-danger {
+    color: var(--danger-color);
+}
+
+.text-warning {
+    color: var(--warning-color);
+}
+
+.text-medium {
+    color: var(--medium-color);
+}
+
+.text-success {
+    color: var(--success-color);
+}

@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+}
+
+body {
+    background: #fff;
+    color: #000;
+    font: 1rem/1.5 system-ui, system, sans-serif;
+}
+
+:focus {
+    outline-style: none;
+}
+
+input, button {
+    font-family: inherit;
+    font-size: inherit;
+    border: 1px solid #ccc;
+    background: #fff;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    padding: 0.6rem 1.2rem;
+    background-color: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+ul {
+    list-style: none;
+}
+
+form {
+    margin: 3rem auto;
+    max-width: 960px;
+}
+
+form > div {
+    margin-bottom: 1rem;
+}
+
+form ul {
+    padding: 0 1rem;
+    border: 1px solid #ccc;
+}
+
+form ul li {
+    display: block;
+    margin: 1rem 0;
+}
+
+form ul li label {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+form ul li label input {
+    order: 1;
+}
+
+form ul li label span {
+    order: 2;
+    padding-left: 0.5rem;
+    color: #444;
+}
+
+form input[type="text"] {
+    padding: 0.3rem 0.6rem;
+    display: block;
+    margin-top: 0.6rem;
+    width: 100%;
+}
+
+label[for="tracking-code"] {
+    display: block;
+    font-weight: 700;
+}

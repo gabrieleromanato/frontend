@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Marked: Markdown in browser</title>
+    <link rel="stylesheet" href="style.css" media="screen">
+</head>
+<body>
+
+    <main>
+        <form action="#">
+            <div class="form-row">
+                <div class="form-col">
+                    <label for="markdown">Markdown</label>
+                    <textarea id="markdown"></textarea>
+                    <button type="button" id="convert">Convert</button>
+                </div>
+                <div class="form-col">
+                    <label for="output">HTML Output</label>
+                    <textarea id="output"></textarea>
+                </div>
+            </div>
+        </form>
+    </main>
+ 
+    
+    <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

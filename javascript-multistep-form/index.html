@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Multi-Step Form</title>
+    <link rel="stylesheet" href="style.css" media="screen">
+</head>
+<body>
+    <main>
+        <form action="#" class="form-multistep" novalidate>
+            <nav class="form-multistep-navigation">
+                <button type="button" data-step="#step-1" class="form-nav-btn active">Shipping Information</button>
+                <button type="button" data-step="#step-2" class="form-nav-btn">Account Information</button>
+                <button type="button" data-step="#step-3" class="form-nav-btn">Privacy</button>
+            </nav>
+            <fieldset id="step-1">
+                <legend>Shipping Information</legend>
+                <div class="form-group">
+                    <label for="address" class="form-label">Address</label>
+                    <input type="text" class="form-input" id="address" name="address" required>
+                </div>
+                <div class="form-group">
+                    <label for="city" class="form-label">City</label>
+                    <input type="text" class="form-input" id="city" name="city" required>
+                </div>
+                <div class="form-group">
+                    <label for="zip" class="form-label">ZIP</label>
+                    <input type="text" class="form-input" id="zip" name="zip" required>
+                </div>
+            </fieldset>
+            <fieldset class="hidden" id="step-2">
+                <legend>Account Information</legend>
+                <div class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-input" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone" class="form-label">Phone</label>
+                    <input type="text" class="form-input" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="mobile" class="form-label">Mobile</label>
+                    <input type="text" class="form-input" id="mobile" name="mobile" required>
+                </div>
+            </fieldset>
+            <fieldset class="hidden" id="step-3">
+                <legend>Privacy</legend>
+                <div class="form-group form-group-check">
+                    <label for="policy" class="form-label">I accept the Privacy Policy</label>
+                    <input type="checkbox" class="form-input" id="policy" name="policy" value="1" required>
+                </div>
+                <div class="form-group form-group-check">
+                    <label for="newsletter" class="form-label">I wish to sign up to the Newsletter</label>
+                    <input type="checkbox" class="form-input" id="newsletter" name="newsletter" value="1">
+                </div>
+                <div class="form-submit">
+                    <button type="submit" class="btn">Submit</button>
+                </div>
+            </fieldset>
+            <div class="form-message hidden"></div>
+        </form>
+    </main>
+    <script src="script.js"></script>   
+</body>
+</html>

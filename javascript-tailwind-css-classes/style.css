@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font: 1rem/1.5 system-ui, sans-serif;
+    background: #fff;
+    color: #000;
+}
+
+.border {
+    border-style: solid;
+}
